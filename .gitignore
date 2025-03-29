@@ -1,0 +1,10 @@
+# Ignore compiled binaries
+*.class
+*.exe
+
+# Ignore logs and temporary files
+*.log
+tmp/
+
+# Ignore all .env files (secrets, credentials)
+.env
