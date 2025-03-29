@@ -1,0 +1,2 @@
+Adavantages :
+Performance Improvement – Stored procedures are precompiled and stored in the database, reducing query parsing and execution time.

@@ -1,0 +1,131 @@
+OOPS philosophies:
+"""ask not what a system does , ask what does it do"""
+points:
+class-1:
+** constructer **:
+-> constructer can be private.(for purpose of static)
+->default constructer does not exist after defining the custom constructer with parameters.(usage oof default result's in compilation error)
+->the constructer has no return type because it return the object of that respective class.
+->there is another way of initializing the instance variables using static initializing blocks.
+->this static blocks will called or executed before the constructer.(even if we donlt call the constructer)
+->this instance blocks will called or executed before the constructer( when constructer are called).
+->by default operations on short,byte are done like int similarly for float it consider as double.
+JVM:
+->The JVM does perform garbage collection,The timing and behavior of garbage collection depend on the JVM implementation and runtime conditions,
+making it unpredictable.
+->The JVM requires a properly defined entry point method (main())to execute the application.
+->A Java compiled code can be run on any computer that has a JVM.
+_______________________________________________________________________________________________________________________________________________
+class-2:
+->final elements:
+    -final classes are not inherited (all immutable class are final by default)
+    -final methods can't be overridden or overloaded.
+    -final variables can't be changed.
+->String is not iterable.
+->StringIndexOutOfBound exception can be occuredd for operations such as ex: letters.substring(6, 5)
+->interfaces and abstract classes are not be instantiated.
+***importing and package**
+->cannot use wildcards anyplace other than the end of an import statement(❌import aquarium.*.Jelly;)
+->java.lang is automatically imported.
+->no need to import classes in one another if both are in same package.
+->importing by classname takes precedence over wildcards. (  import aquarium.*;  import aquarium.jellies.Water;  ).
+_______________________________________________________________________________________________________________________________________________
+class-3:
+->remove method returns 1.value removed for index-based  2. true or false for value-based remove(Object o)     
+->for-loop and for-each loop comparion 
+->can't place the code down of the break or continue line.(compilation error)
+->use of labeled loops (avoiding the flags).
+->[ example : @overridden ] annotations are those compile time constructs, that provide additional meanning to the compiler. 
+->all methods it the interface should be declared public.(because methods are public and abstract ).
+->all the variables in the interface should be final , static and public.
+->if a class implements the interface then we have to overridde all the methods in interface if not put abstract to the class.(to avoid compilation error)
+->anonumous class 
+-> if two operators has same priority then the caluclation done from left to right.
+->parathesis are mandatory while writing condition for while,for and if.
+_______________________________________________________________________________________________________________________________________________
+class-4:
+->in order to make any class immutable just make it final.
+->in string pool we have references or string values created very time rather then variables .
+->this string pool is created to increase the memory efficient and conserve memory.(use less string varaiables rather then  use values)
+-> concatenation always returns the string object not string pool, so == will not match.
+-> "==" reference and .equals() content  , intern() changes object to string pool.
+-> String buffer are thread safe and slower then builder beacause of synchronization in buffer.
+-> String builder and buffer does not implement iterable means can't be used in place of taxis in ex: for (Object obj : taxis).
+->int[][] scores = new int[5][]; is legal!! Array Declaration
+->The capacity() method is available in the following Java classes:
+    -StringBuffer 16
+    -StringBuilder 16
+    -Vector  10
+    **New Capacity = (Old Capacity * 2) + 2 for data growth 
+->we can't override the equals method of string as it is immutable , we can override the string buffer and builder.
+->inorder to make any custom class immutable we have to create to:
+    -declare class as final
+    -declare all the variables as final and private 
+    -not keep anu setter methods
+    -use defensive copy in the getter methods
+->Two ArrayLists with the same content are equal(overrides equals() ) and Two arrays with the same content are not equal(o uses object equality).
+->ages.add(null);  9: for (int age : ages) System.out.print(age)  does not because null is not an int.The code does not compile.when the for loop tries to unbox null into an
+  int, it fails and throws a NullPointerException.
+
+->LocalDate, LocalTime, LocalDateTime , ZonedDateTime , OffsetDateTime , Instant (Immutable ✅)
+->java.util.Date and java.util.Calendar (Mutable ❌)
+->Array has to be sorted before using binary search method of Arrays otherwise it returns undefined.
+    -example:
+        int b = Arrays.binarySearch(random, a);
+___________________________________________________________________________________________________________________________________________________
+Class -5:(STATIC)
+->scope of static abnd non static varaiables.
+           Scenario	                                            Allowed?	    Reason
+Access static variables in a non-static method	                 ✅ Yes	    Static variables are class-level and always available.
+Access non-static variables in a static method directly	         ❌ No	    Non-static variables belong to objects, and static methods don’t have an instance context.
+Access non-static variables in a static method via an object	 ✅ Yes	    The object provides an instance context.
+->we can call static methods with objects , where this allow us even if we set object to null nullpointerexception will not occur(as JVM treat it as class)
+->steps inorder to create Singleton ( ensures that only one instance of a class is created.): 
+    -declare a static data variables                                    
+    -declare constructer as private
+    -declare static method for calling trough class name.
+    code:class 
+        Singleton {
+        private static Singleton instance;
+
+        private Singleton() { // Private constructor
+            System.out.println("Singleton instance created");
+        }
+
+        public static Singleton getInstance() {
+            if (instance == null) {
+                instance = new Singleton();
+            }
+            return instance;
+        }
+        }
+________________________________________________________________________________________________________________________________________________
+class 6(inheritance):
+->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
+Overriding:
+Summary
+Scenario	                                                     Allowed?	                                        Reason
+Adding an unchecked exception (e.g., RuntimeException)	            ✅ Yes	    Unchecked exceptions are not restricted in overriding.
+Throwing the same checked exception as superclass	                ✅ Yes	    The subclass can throw the same checked exception.
+Throwing a subclass of the declared checked exception	            ✅ Yes	    It is a narrower exception, so it is allowed.
+Throwing a broader checked exception than the superclass method	    ❌ No	    The subclass cannot throw a more general exception.
+Adding a new checked exception when the superclass method does  	❌ No	    The subclass cannot introduce a new checked exception.
+not declare any.
+->Abstract class 
+    -can't have final ,private 
+    -abstract method does not have body
+    -abstract class can't be instantiated
+    -abstract method should have equal or more accessibility then parent one.
+    -all methods should be implemened on child
+->abstract vs interfaces
+    1.in interfaces are methods are abstract
+    2.we only inherite only one class, we can implement multiple interfaces
+    3.by deafult there are public and abstract until we explicitly mention default or static
+    4.Only public, static, and final variables
+    5. interface members are final,static ,public and should be initialized
+
+
+
+
+
+

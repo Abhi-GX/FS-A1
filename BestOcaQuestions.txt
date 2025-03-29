@@ -1,0 +1,30 @@
+
+Q22:
+Given :
+3.class Dozens {
+4.  int[] dz = {1,2,3,4,5,6,7,8,9,10,11,12};
+5.}
+6.public class Eggs {
+7.  public static void main(String args[]){
+8.     Dozens[] da = new Dozens[3];
+9.     da[0] = new Dozens();
+10.    Dozens d = new Dozens();
+11.    da[1] = d;
+12.    d = null;
+13.    da[1] = null;
+14.    //do stuff
+15.  }
+16.}
+
+
+Which two are true about the objects created within main(), and which are eligible for garbage collection when line 14 is reached?
+Which two are true about the objects created within main(), and which are eligible for garbage collection when line 14 is reached?
+A. Three objects were created
+B. Four objects were created
+C. Five objects were created
+D. Zero objects are eligible for GC
+E. One object is eligible for GC
+F. Two objects are eligible for GC
+G. Three objects are eligible for GC
+
+Ans: C and F

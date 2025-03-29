@@ -1,0 +1,917 @@
+What does the following code output? public class Test { int count; public void Test() { count = 4; } public static void main(String[] args) { Test s = new Test(); System.out.println(s.count); } }
+Question 1Answer
+
+a.
+Compilation fails on line 8.
+
+
+b.
+Compilation fails on line 3.
+
+
+c.
+Compilation fails on line 4.
+
+
+d.
+0
+
+
+e.
+4
+
+
+
+f.
+Compilation fails on line 7.
+
+Question 2
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test
+
+{
+
+            public static void main(String[] args){
+
+                    int x=10;
+
+                    int y;
+
+                        System.out.println(x+y);
+
+ 
+
+            }
+
+}
+Question 2Answer
+
+a.
+Compilation fails
+
+
+b.
+Run time exception
+
+
+c.
+Garbage value
+
+
+d.
+0
+
+
+e.
+10
+
+Question 3
+Complete
+Marked out of 1.00
+Flag question
+Question text
+Which of the following legally fill in the blank so you can run the main() method from the
+
+command line? (Choose all that apply)
+
+class Test
+
+{
+
+            public static void main(String _Names[]){}
+
+}
+
+
+Question 3Answer
+
+a.
+String abc[]
+
+
+b.
+String names
+
+
+c.
+String[] _names
+
+
+d.
+String... $n
+
+
+e.
+String _Names[]
+
+
+f.
+String[] 123
+
+
+g.
+None of the these.
+
+Question 4
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test
+
+{
+
+            int x;
+
+            int y;
+
+                        public static void main(String[] args){
+
+                        Test t=new Test();
+
+                                    t.y=10;
+
+             System.out.println(t.x+t.y);
+
+ 
+
+            }
+
+}
+Question 4Answer
+
+a.
+0
+
+b.
+10
+
+
+c.
+Garbage value
+
+
+d.
+Compilation fails
+
+
+e.
+Run time exception
+
+Question 5
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test
+
+{
+
+            public static void main(String[] args){
+
+                                    Test t=new Test();
+
+                                    System.out.print(1);
+
+            }
+
+            protected void finalize(){
+
+                                    System.out.println(" "+2);
+
+                                    }
+
+}
+Question 5Answer
+
+a.
+2
+
+
+b.
+Compilation fails
+
+
+c.
+2 1
+
+
+d.
+Can’t predict the output
+
+
+e.
+1
+
+
+f.
+1 2
+
+Question 6
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test { public static void main(String [] args) { int year; //Line-3 int day; //Line-4 year = 2050; //Line-5 System.out.println(year); //Line-6 } }
+Question 6Answer
+
+a.
+Compilation fails at Line-3
+
+b.
+Run time exception
+
+
+c.
+0
+
+d.
+Compilation fails at Line-4
+
+
+e.
+2050
+
+f.
+Compilation fails at Line-5
+
+Question 7
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test{
+
+  public static void main(String[] args) {
+
+            byte a=3;
+
+                int b=10;
+
+                float c=100.1f;
+
+                byte d;
+
+                d=b+a;                                 //Line-7
+
+                b= (int)a;                             // Line-8
+
+                a+=7;                                   // Line-9
+
+     System.out.println(d);               //Line-10
+
+     System.out.println(b);              // Line-11
+
+    System.out.println(a);                              //Line-12
+
+                }
+
+ }
+
+
+Question 7Answer
+
+a.
+Compilation fails at line 8
+
+
+b.
+Compilation fails at line 11
+
+
+c.
+Compilation succeeds
+
+
+d.
+Compilation fails at line 9
+
+
+e.
+Compilation fails at line 10
+
+
+f.
+Compilation fails at line 7
+
+
+g.
+Compilation fails at line 12
+
+Question 8
+Complete
+Marked out of 1.00
+Flag question
+Question text
+Which represent the order in which the following statements can be assembled into a program that will compile successfully? (Choose all that apply)
+
+A: class Rabbit {}
+
+B: import java.util.*;
+
+C: package animals;
+
+
+Question 8Answer
+
+a.
+C, A
+
+
+b.
+C, B, A
+
+
+c.
+B, A
+
+
+d.
+A, C
+
+
+e.
+A, B
+
+
+f.
+A, B, C
+
+
+g.
+B, C, A
+
+Question 9
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test { public static void main(String[] args) { String s; System.out.println(s); } }
+Question 9Answer
+
+a.
+prints nothing
+
+b.
+null
+
+c.
+compilation fails
+
+d.
+compiles but will not run
+Question 10
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test {
+
+public static void main(String [] args) {
+
+int x=1;
+
+if(x)
+
+        System.out.println("A"); 
+
+else
+
+      System.out.println("B"); 
+
+}
+
+}
+Question 10Answer
+
+a.
+Compilation fails
+
+
+b.
+B
+
+
+c.
+A
+
+
+d.
+Run time exception
+
+Question 11
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test{
+
+   public static void main(String[] args)
+
+                {
+
+                   float f=23.11f;
+
+                   short s=(short)f;
+
+                   System.out.println(s);
+
+                }
+
+}
+Question 11Answer
+
+a.
+23
+
+
+b.
+23.0
+
+
+c.
+0
+
+
+d.
+Compilation fails
+
+Question 12
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class T
+
+{
+
+private T(){
+
+ System.out.println("hello world");
+
+}
+
+public static void main(String args[])
+
+{
+
+   T t=new T();
+
+ }
+
+}
+
+
+Question 12Answer
+
+a.
+hello world
+
+
+b.
+compilation fails
+
+
+c.
+prints nothing
+
+
+d.
+none of these
+
+Question 13
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test {
+
+    public static void main(String [] args) {
+
+                                String x="abc";
+
+                                switch(x){                                                        //Line-4
+
+                                                case "abc" :                                        //Line-5
+
+                                                System.out.println("1");               //Line-6
+
+                                case "def" :                                                     //Line-7
+
+                                   System.out.println("2");                         //Line-8
+
+                                }
+
+                }
+
+}
+Question 13Answer
+
+a.
+1
+2
+
+b.
+1
+
+
+c.
+Compilation fails Line-5
+
+
+d.
+Compilation fails Line-4
+
+e.
+Compilation fails Line-7
+
+
+f.
+Compilation fails Line-8
+
+
+g.
+2
+
+
+h.
+Compilation fails Line-6
+
+Question 14
+Complete
+Marked out of 1.00
+Flag question
+Question text
+Suppose we have a class named Test. Which of the following statements are true?
+
+(Choose all that apply)
+
+ 
+
+1: public class Test {
+
+2: public static void main(String[] args) {
+
+3: Test one = new Test();
+
+4: Test two = new Test();
+
+5: Test three = one;
+
+6: one = null;
+
+7: Test four = one;
+
+8: three = null;
+
+9: two = null;
+
+10: two = new Test();
+
+11: System.gc();
+
+12: } }
+
+
+Question 14Answer
+
+a.
+The Test object from line 3 is first eligible for garbage collection immediately
+
+following line 8.
+
+
+
+b.
+The Test object from line 4 is first eligible for garbage collection immediately
+
+following line 9.
+
+
+
+c.
+The Test object from line 4 is first eligible for garbage collection immediately
+
+following line 11.
+
+
+
+d.
+The Test object from line 3 is first eligible for garbage collection immediately
+
+following line 12.
+
+
+
+e.
+The Test object from line 3 is first eligible for garbage collection immediately
+
+following line 6.
+
+
+
+f.
+The Test object from line 4 is first eligible for garbage collection immediately
+
+following line 12.
+
+
+Question 15
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Demo
+
+  {
+
+             String title;
+
+             int value;
+
+     public Demo()
+
+            {
+
+             title += " class";
+
+             }
+
+     public Demo(int value) {
+
+             this.value = value;
+
+             title = "Demo";
+
+ 
+
+     }
+
+ }
+
+class  Test {
+
+ public static void main (String args[]){
+
+ Demo d = new Demo(5);
+
+ System.out.println(d.title);
+
+ }
+
+}
+
+
+Question 15Answer
+
+a.
+Class Demo
+
+
+b.
+Class
+
+
+c.
+Demo
+
+
+d.
+Demo class
+
+e.
+Compilation fails
+
+Question 16
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test
+
+{
+
+public static void main(String[] args)
+
+{
+
+    int a = 4;
+
+    double b = 8;
+
+ 
+
+    System.out.println(a+b+"KMIT " );
+
+                }
+
+}
+
+
+Question 16Answer
+
+a.
+48KMIT
+
+
+b.
+12.0KMIT
+
+
+c.
+12KMIT
+
+
+d.
+48.0KMIT
+
+Question 17
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test
+
+{
+
+                String s;
+
+     public static void main(String[] args)
+
+                {
+
+                System.out.println(new Test().s);
+
+                }
+
+}
+Question 17Answer
+
+a.
+prints nothing
+
+
+b.
+null
+
+
+c.
+compilation fails
+
+
+d.
+compiles but will not run
+
+Question 18
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test {
+
+    public static void main(String [] args) {
+
+          int a=10;
+
+                if(++a = 11)
+
+                 System.out.println(a);
+
+                else
+
+                 ++a;
+
+                 System.out.println(a);
+
+    }
+
+}
+
+
+Question 18Answer
+
+a.
+11
+
+
+b.
+Compilation fails
+
+
+c.
+12
+
+
+d.
+10
+
+
+e.
+Run time exception
+
+Question 19
+Complete
+Marked out of 1.00
+Flag question
+Question text
+Which of the following are true? (Choose all that apply)
+
+ class Test
+
+ {
+
+             public static void main(String[] args){
+
+                          short numPets = 5;          // line4
+
+                         int numGrains = 5.6;        //line5
+
+                         String name = "Scruffy"; //line6
+
+                         numPets.length();          //line7
+
+                        numGrains.length();       //line8
+
+                        name.length();               //line9
+
+             }
+
+ }
+
+
+Question 19Answer
+
+a.
+Line 5 generates a compiler error.
+
+
+b.
+Line 7 generates a compiler error.
+
+
+c.
+Line 4 generates a compiler error.
+
+
+d.
+Line 6 generates a compiler error.
+
+
+e.
+Line 9 generates a compiler error.
+
+
+f.
+The code compiles as is.
+
+
+g.
+Line 8 generates a compiler error.
+
+Question 20
+Complete
+Marked out of 1.00
+Flag question
+Question text
+class Test
+
+{
+
+                public static void main(String[] args)
+
+                {
+
+                                short a=0;
+
+                           for(;a<10;a++)
+
+                                  a=a+6;
+
+                               System.out.println(a);
+
+                
+
+                 }
+
+}
+
+
+Question 20Answer
+
+a.
+0
+
+
+b.
+Run time exception
+
+
+c.
+14
+
+
+d.
+Compilation fails
