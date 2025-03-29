@@ -1,17 +1,19 @@
 import java.util.*;
 public class Fencwick{
     public static int[] tree;
+    public static int[] arr;
     public static Scanner sc= new Scanner(System.in);
     public static void init(){
-        for(int i=0;i<tree.length-1;i++){
-            update(i+1,sc.nextInt());
+        for(int i=0;i<arr.length;i++){
+            update(i+1,arr[i]);
         }
     }
     public static int fetch(int idx){
         int sum=0;
         while(idx>0){
             sum+=tree[idx];
-            idx=((~idx+1)&idx)-idx;
+            System.out.println(idx+" "+sum);
+            idx=idx-((~idx+1)&idx);
         }
         return sum;
     }
@@ -21,14 +23,25 @@ public class Fencwick{
             idx=((~idx+1)&idx)+idx;
         }
     }
+    public static void print(){
+        for(int i : tree){
+            System.out.print(i+" ");
+        }
+    }
     public static void main(String[] argv){
         int n=sc.nextInt();
+        arr= new int[n];
         tree= new int[n+1];
+        for(int i=0;i<arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
         init();
-        System.out.println(tree);
+        print();
         System.out.println(fetch(4));
-        update(2,10-tree[2]);
-        System.out.println(tree);
+        int idx=2;
+        update(idx,10-arr[idx-1]);
+        arr[idx]=10;
+        print();
         System.out.println(fetch(4));
     }
 }
