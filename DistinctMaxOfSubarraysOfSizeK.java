@@ -72,7 +72,7 @@ public class DistinctMaxOfSubarraysOfSizeK{
                 sum=sum-arr[idx];
                 idx++;
             }
-            right++;''
+            right++;
         }
         
         System.out.println(maxsum);
