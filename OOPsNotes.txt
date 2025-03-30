@@ -115,6 +115,26 @@ public class Tiger extends Animal { // Subclass of Animal
     }
 }
 
+ =>(Nested classes) <= :
+->A nested class (especially a static nested class) has full access to the private members of its enclosing class and vice versa.
+
+-> How to call nested non static class :
+
+class Main {
+    public class emo { // Non-static inner class
+        private int g = 5; // Private variable
+        public int getG() { // Getter method
+            return g;
+        }
+    }
+    public static void main(String[] args) {
+        Main m = new Main(); // Create an instance of Main first
+        Main.emo b = m.new emo();
+        // m.emo b = m.new emo();  ❌ ERROR ,Incorrect Correct way to create a inner class object
+        System.out.println(b.g); // ✅ Access via getter method (got access to private member)
+    }
+}
+
 ________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
