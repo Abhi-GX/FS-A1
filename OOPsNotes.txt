@@ -99,6 +99,22 @@ Access non-static variables in a static method via an object	 ✅ Yes	    The ob
             return instance;
         }
         }
+-> we can't access the protected members and methods o a class in another package even if we import it.
+package package2;
+import package1.Animal; // Importing parent class
+
+public class Tiger extends Animal { // Subclass of Animal
+    public void show() {
+        System.out.println("Animal name: " + name); // ✅ Accessible via inheritance
+        display(); // ✅ Accessible via inheritance
+    }
+
+    public static void main(String[] args) {
+        Tiger t = new Tiger();
+        t.show(); // ✅ Works fine because `Tiger` is a subclass
+    }
+}
+
 ________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
