@@ -158,6 +158,7 @@ ex:
     -However, whenthe primitive int version is provided, there is no reason for Java to do the extra work ofautoboxing.
         public void fly(int numMiles) { }
         public void fly(Integer numMiles) { }
+->refer ""Constructor Chaining"".
 ________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
