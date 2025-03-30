@@ -80,6 +80,7 @@ Access static variables in a non-static method	                 ✅ Yes	    Stat
 Access non-static variables in a static method directly	         ❌ No	    Non-static variables belong to objects, and static methods don’t have an instance context.
 Access non-static variables in a static method via an object	 ✅ Yes	    The object provides an instance context.
 ->we can call static methods with objects , where this allow us even if we set object to null nullpointerexception will not occur(as JVM treat it as class)
+->static imports are used to call all static members of a class.
 ->steps inorder to create Singleton ( ensures that only one instance of a class is created.): 
     -declare a static data variables                                    
     -declare constructer as private
@@ -134,7 +135,9 @@ class Main {
         System.out.println(b.g); // ✅ Access via getter method (got access to private member)
     }
 }
-
+=>(static blocks)<= :
+1. helps in assigning values to final variables;
+2. first all static blocks will run then the code in constructor will run mainly in sub class and inheritance questions .
 ________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
