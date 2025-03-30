@@ -85,59 +85,79 @@ Access non-static variables in a static method via an object	 ✅ Yes	    The ob
     -declare a static data variables                                    
     -declare constructer as private
     -declare static method for calling trough class name.
-    code:class 
-        Singleton {
-        private static Singleton instance;
+                code:class 
+                    Singleton {
+                    private static Singleton instance;
 
-        private Singleton() { // Private constructor
-            System.out.println("Singleton instance created");
-        }
+                    private Singleton() { // Private constructor
+                        System.out.println("Singleton instance created");
+                    }
 
-        public static Singleton getInstance() {
-            if (instance == null) {
-                instance = new Singleton();
-            }
-            return instance;
-        }
-        }
+                    public static Singleton getInstance() {
+                        if (instance == null) {
+                            instance = new Singleton();
+                        }
+                        return instance;
+                    }
+                    }
+
 -> we can't access the protected members and methods o a class in another package even if we import it.
-package package2;
-import package1.Animal; // Importing parent class
+    ex:
+            package package2;
+            import package1.Animal; // Importing parent class
 
-public class Tiger extends Animal { // Subclass of Animal
-    public void show() {
-        System.out.println("Animal name: " + name); // ✅ Accessible via inheritance
-        display(); // ✅ Accessible via inheritance
-    }
+            public class Tiger extends Animal { // Subclass of Animal
+                public void show() {
+                    System.out.println("Animal name: " + name); // ✅ Accessible via inheritance
+                    display(); // ✅ Accessible via inheritance
+                }
 
-    public static void main(String[] args) {
-        Tiger t = new Tiger();
-        t.show(); // ✅ Works fine because `Tiger` is a subclass
-    }
-}
+                public static void main(String[] args) {
+                    Tiger t = new Tiger();
+                    t.show(); // ✅ Works fine because `Tiger` is a subclass
+                }
+            }
 
  =>(Nested classes) <= :
 ->A nested class (especially a static nested class) has full access to the private members of its enclosing class and vice versa.
 
 -> How to call nested non static class :
+        ex:
+                class Main {
+                    public class emo { // Non-static inner class
+                        private int g = 5; // Private variable
+                        public int getG() { // Getter method
+                            return g;
+                        }
+                    }
+                    public static void main(String[] args) {
+                        Main m = new Main(); // Create an instance of Main first
+                        Main.emo b = m.new emo();
+                        // m.emo b = m.new emo();  ❌ ERROR ,Incorrect Correct way to create a inner class object
+                        System.out.println(b.g); // ✅ Access via getter method (got access to private member)
+                    }
+                }
 
-class Main {
-    public class emo { // Non-static inner class
-        private int g = 5; // Private variable
-        public int getG() { // Getter method
-            return g;
-        }
-    }
-    public static void main(String[] args) {
-        Main m = new Main(); // Create an instance of Main first
-        Main.emo b = m.new emo();
-        // m.emo b = m.new emo();  ❌ ERROR ,Incorrect Correct way to create a inner class object
-        System.out.println(b.g); // ✅ Access via getter method (got access to private member)
-    }
-}
 =>(static blocks)<= :
 1. helps in assigning values to final variables;
 2. first all static blocks will run then the code in constructor will run mainly in sub class and inheritance questions .
+
+=>(Overloading )<= :
+->can't change to static ;
+-> not allowed to overload methods with the same parameter list.
+ex: 
+        public void fly(int numMiles) { }
+        public static void fly(int numMiles) { } // DOES NOT COMPILE
+
+        public void fly(int numMiles) { }
+        public static void fly(int numMiles) { } // DOES NOT COMPILE
+
+        public void fly(int numMiles) { }
+        public int fly(int numMiles) { } // DOES NOT COMPILE
+->Autoboxing while overloading : 
+    -However, whenthe primitive int version is provided, there is no reason for Java to do the extra work ofautoboxing.
+        public void fly(int numMiles) { }
+        public void fly(Integer numMiles) { }
 ________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
