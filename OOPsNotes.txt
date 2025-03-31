@@ -181,7 +181,11 @@ ex:
     -Controlling access to data through methods (getters/setters)
     -Managing how and when state changes
     -Providing a clean interface to interact with the object
-
+=>(Lamda and functional interface)<=
+->no need of explicit tyes in parameters it will decide by interface signature(u can if u want)
+->()->{return b<c} or a->b<c:
+->BiFunction, predicate is predifined functional interface.
+    ex:BiFunction<Integer, Integer, String> check = (a, b) -> (a > b) ? "Match" : "Not Match";
 ____________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
