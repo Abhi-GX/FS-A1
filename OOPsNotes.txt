@@ -82,7 +82,7 @@ Access non-static variables in a static method via an object	 ✅ Yes	    The ob
 ->we can call static methods with objects , where this allow us even if we set object to null nullpointerexception will not occur(as JVM treat it as class)
 ->static imports are used to call all static members of a class.
     ex: import static java.util.Collections.*;
-    
+
 ->Rules for this()
     ❌ this() must be the first statement in a constructor.
     ❌ this() cannot be used inside static methods (because it refers to instance context).
@@ -148,9 +148,9 @@ Access non-static variables in a static method via an object	 ✅ Yes	    The ob
 =>(static blocks)<= :
 1. helps in assigning values to final variables;
 2. first all static blocks will run then the code in constructor will run mainly in sub class and inheritance questions .
-        1st-static{}
-        2nd-{}
-        3rd-code in constructor
+        1st-static{} (only once )
+        2nd-{} (every time we call constructor)
+        3rd-code in constructor (every time we call constructor)
 
 =>(Overloading )<= :
 ->can't change to static ;
