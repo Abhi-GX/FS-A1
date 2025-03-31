@@ -169,7 +169,8 @@ ex:
     -There should be no setters or methods that modify the object's state
     -If instance variables are objects, they should be immutable too or defensively copied
     -Subclassing should be prevented (often by making the class final)
-________________________________________________________________________________________________________________________________________________
+    
+______________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
 Overriding:
