@@ -162,6 +162,13 @@ ex:
         public void fly(int numMiles) { }
         public void fly(Integer numMiles) { }
 ->refer ""Constructor Chaining"".
+->should not use default access specifier in class ( shows error) because it is added by default.
+=>(Immutabulity)<=
+    -Instance variables should be private.
+    -Instance variables should be final to prevent reassignment
+    -There should be no setters or methods that modify the object's state
+    -If instance variables are objects, they should be immutable too or defensively copied
+    -Subclassing should be prevented (often by making the class final)
 ________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
