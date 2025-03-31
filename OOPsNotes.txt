@@ -81,6 +81,7 @@ Access non-static variables in a static method directly	         ❌ No	    Non-
 Access non-static variables in a static method via an object	 ✅ Yes	    The object provides an instance context.
 ->we can call static methods with objects , where this allow us even if we set object to null nullpointerexception will not occur(as JVM treat it as class)
 ->static imports are used to call all static members of a class.
+    ex: import static java.util.Collections.*;
 ->steps inorder to create Singleton ( ensures that only one instance of a class is created.): 
     -declare a static data variables                                    
     -declare constructer as private
