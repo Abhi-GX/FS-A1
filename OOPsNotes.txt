@@ -82,6 +82,12 @@ Access non-static variables in a static method via an object	 ✅ Yes	    The ob
 ->we can call static methods with objects , where this allow us even if we set object to null nullpointerexception will not occur(as JVM treat it as class)
 ->static imports are used to call all static members of a class.
     ex: import static java.util.Collections.*;
+    
+->Rules for this()
+    ❌ this() must be the first statement in a constructor.
+    ❌ this() cannot be used inside static methods (because it refers to instance context).
+    ✅ It helps in constructor chaining to avoid code duplication.
+
 ->steps inorder to create Singleton ( ensures that only one instance of a class is created.): 
     -declare a static data variables                                    
     -declare constructer as private
