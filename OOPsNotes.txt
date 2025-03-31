@@ -165,11 +165,15 @@ ex:
 ->should not use default access specifier in class ( shows error) because it is added by default.
 =>(Immutabulity)<=
     -Instance variables should be private.
-    -Instance variables should be final to prevent reassignment
-    -There should be no setters or methods that modify the object's state
-    -If instance variables are objects, they should be immutable too or defensively copied
-    -Subclassing should be prevented (often by making the class final)
-    
+    -Instance variables should be final to prevent reassignment.
+    -There should be no setters or methods that modify the object's state.
+    -If instance variables are objects, they should be immutable too or defensively copied.
+    -Subclassing should be prevented (often by making the class final).
+=>(Encapsulation)<=
+    -Hiding implementation details (often using private variables, which is correct)
+    -Controlling access to data through methods (getters/setters)
+    -Managing how and when state changes
+    -Providing a clean interface to interact with the object
 ______________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
