@@ -75,6 +75,7 @@ class-4:
 ->in order to make any class immutable just make it final.
 ->in string pool we have references or string values created very time rather then variables .
 ->this string pool is created to increase the memory efficient and conserve memory.(use less string varaiables rather then  use values)
+-> when you perform 1(some value)+" " then it returns string object.
 -> concatenation always returns the string object not string pool, so == will not match.
 -> "==" reference and .equals() content  , intern() changes object to string pool.
 -> String buffer are thread safe and slower then builder beacause of synchronization in buffer.
