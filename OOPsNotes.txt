@@ -15,6 +15,23 @@ JVM:
 making it unpredictable.
 ->The JVM requires a properly defined entry point method (main())to execute the application.
 ->A Java compiled code can be run on any computer that has a JVM.
+->Underscores are can placed between the number.
+    ex: double d4 = 1_234.0
+        int i1 = 1_234
+        double d4 = 1234_.0 ❌ can't place adjacent to decimal point.
+
+-> When does "" finalize() ""  NOT execute ?
+    -If the GC does not run during the program execution (Java does not guarantee when GC will run).
+
+    -If an object never becomes unreachable (still referenced).
+
+    -If GC uses alternative strategies (some JVMs may skip finalize() for performance reasons).
+
+    -If System.exit() is called before GC runs.
+
+    -From Java 9 onwards, finalize() is deprecated due to unpredictable behavior and 
+    better alternatives like try-with-resources and close() in AutoCloseable.
+-> Calling System.gc() suggests that Java might wish to run the garbage collector and Java is free to ignore the request.
 _______________________________________________________________________________________________________________________________________________
 class-2:
 ->final elements:
