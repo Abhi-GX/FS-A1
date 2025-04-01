@@ -1,5 +1,7 @@
 OOPS philosophies:
 """ask not what a system does , ask what does it do"""
+
+
 points:
 class-1:
 ** constructer **:
@@ -15,6 +17,14 @@ JVM:
 making it unpredictable.
 ->The JVM requires a properly defined entry point method (main())to execute the application.
 ->A Java compiled code can be run on any computer that has a JVM.
+-> About Java:
+    Java  not allows operator overloading.
+    Java code compiled on Windows can run on Linux (platform independent).
+    Java has no pointers to specific locations in memory.
+    Java is not a procedural language.
+    Java is an object-oriented language.
+    Java is not a functional programming language.
+
 ->Underscores are can placed between the number.
     ex: double d4 = 1_234.0
         int i1 = 1_234
@@ -32,6 +42,7 @@ making it unpredictable.
     -From Java 9 onwards, finalize() is deprecated due to unpredictable behavior and 
     better alternatives like try-with-resources and close() in AutoCloseable.
 -> Calling System.gc() suggests that Java might wish to run the garbage collector and Java is free to ignore the request.
+-> in mathematical expressions if no precedence are mentioned then it move from left to right;
 _______________________________________________________________________________________________________________________________________________
 class-2:
 ->final elements:
