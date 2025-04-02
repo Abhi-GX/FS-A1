@@ -42,7 +42,7 @@ making it unpredictable.
     -From Java 9 onwards, finalize() is deprecated due to unpredictable behavior and 
     better alternatives like try-with-resources and close() in AutoCloseable.
 -> Calling System.gc() suggests that Java might wish to run the garbage collector and Java is free to ignore the request.
--> in mathematical expressions if no precedence are mentioned then it move from left to right;
+-> in mathematical expressions if no precedence are mentioned then it move from left to right.
 _______________________________________________________________________________________________________________________________________________
 class-2:
 ->final elements:
