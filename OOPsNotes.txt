@@ -227,6 +227,7 @@ Throwing a subclass of the declared checked exception	            ✅ Yes	    It
 Throwing a broader checked exception than the superclass method	    ❌ No	    The subclass cannot throw a more general exception.
 Adding a new checked exception when the superclass method does  	❌ No	    The subclass cannot introduce a new checked exception.
 not declare any.
+->final,static,private methods and (all)class members  cannot be overridden in Java.
 ->Abstract class 
     -can't have final ,private 
     -abstract method does not have body
