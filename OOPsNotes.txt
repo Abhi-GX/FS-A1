@@ -218,15 +218,29 @@ ex:
 ____________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
-Overriding:
-Summary
-Scenario	                                                     Allowed?	                                        Reason
-Adding an unchecked exception (e.g., RuntimeException)	            ✅ Yes	    Unchecked exceptions are not restricted in overriding.
-Throwing the same checked exception as superclass	                ✅ Yes	    The subclass can throw the same checked exception.
-Throwing a subclass of the declared checked exception	            ✅ Yes	    It is a narrower exception, so it is allowed.
-Throwing a broader checked exception than the superclass method	    ❌ No	    The subclass cannot throw a more general exception.
-Adding a new checked exception when the superclass method does  	❌ No	    The subclass cannot introduce a new checked exception.
-not declare any.
+->Constructor Defi nition Rules:
+    1. The first statement of every constructor is a call to another constructor within the class
+    using this(), or a call to a constructor in the direct parent class using super().
+    2. The super() call may not be used after the first statement of the constructor.
+    Introducing Class Inheritance 243
+    3. If no super() call is declared in a constructor, Java will insert a no-argument super()
+    as the first statement of the constructor.
+    4. If the parent doesn’t have a no-argument constructor and the child doesn’t define any
+    constructors, the compiler will throw an error and try to insert a default no-argument
+    constructor into the child class.
+    5. If the parent doesn’t have a no-argument constructor, the compiler requires an explicit
+    call to a parent constructor in each child constructor
+
+->Overriding:
+    Summary
+    Scenario	                                                     Allowed?	                                        Reason
+    Adding an unchecked exception (e.g., RuntimeException)	            ✅ Yes	    Unchecked exceptions are not restricted in overriding.
+    Throwing the same checked exception as superclass	                ✅ Yes	    The subclass can throw the same checked exception.
+    Throwing a subclass of the declared checked exception	            ✅ Yes	    It is a narrower exception, so it is allowed.
+    Throwing a broader checked exception than the superclass method	    ❌ No	    The subclass cannot throw a more general exception.
+    Adding a new checked exception when the superclass method does  	❌ No	    The subclass cannot introduce a new checked exception.
+    not declare any.
+
 ->final,static,private methods and (all)class members  cannot be overridden in Java.
 ->Abstract class 
     -can't have final ,private 
