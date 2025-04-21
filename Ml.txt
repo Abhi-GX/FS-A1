@@ -1,0 +1,9 @@
+Basic ML:
+https://www.interviewbit.com/machine-learning-interview-questions/#why-machine-learning-was-introduced
+https://www.geeksforgeeks.org/machine-learning-interview-questions/
+
+Algorithms:
+SVM
+Decision tree 
+Random forest
+KNN
