@@ -230,7 +230,7 @@ class 6(inheritance):
     constructor into the child class.
     5. If the parent doesn’t have a no-argument constructor, the compiler requires an explicit
     call to a parent constructor in each child constructor
-
+->Field Hiding: subclass defines a field with the same name as a field in its superclass.
 ->Overriding:
     Summary
     Scenario	                                                     Allowed?	                                        Reason
