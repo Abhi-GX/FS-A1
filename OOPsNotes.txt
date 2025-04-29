@@ -218,7 +218,7 @@ ex:
 ____________________________________________________________________________________________________________________________________________________
 class 6(inheritance):
 ->Super class default super() is initialized by default constructer.(if no argument constructor in parent )
-->Constructor Defi nition Rules:
+->Constructor Definition Rules:
     1. The first statement of every constructor is a call to another constructor within the class
     using this(), or a call to a constructor in the direct parent class using super().
     2. The super() call may not be used after the first statement of the constructor.
@@ -254,6 +254,28 @@ class 6(inheritance):
     3.by deafult there are public and abstract until we explicitly mention default or static
     4.Only public, static, and final variables
     5. interface members are final,static ,public and should be initialized
+
+->🧾 Method Resolution Scenarios Table
+
+    Scenario	Superclass Method	    Interface Method	    Child Override Required?	    Behavior / Method Called
+    1	        Concrete	            Abstract	                ❌	                Superclass method satisfies the interface method. Superclass method is called.
+    2	        Concrete	            Default	                    ❌	                Superclass method overrides interface default. Superclass method is called.
+    3	        Concrete	            None	                    ❌	                No conflict. Superclass method is inherited and called.
+    4	        Abstract	            Abstract	                ✅	                Child must implement the method. Child's method is called.
+    5	        Abstract	            Default	                    ✅	                Superclass abstract method overrides interface default. Child must implement it.
+    6	        Abstract	            Abstract	                ❌(if Child is abstract)	If child doesn't implement, it must be declared abstract. No method is called directly.
+    7	        None	                Abstract	                ✅	                Interface requires implementation. Child must define the method. Child's method is called.
+    8	        None	                Default	                    ❌	                Default method is inherited from interface. Interface method is called.
+    9	        Concrete	            Default	                    ❌ (optional override)	Superclass method takes priority. If overridden, Child's method is called; else, Superclass's.
+
+->🧠 Key Rules Summary
+    -Concrete methods in the superclass override interface default methods.
+
+    -Abstract methods in the superclass take priority over default methods from interfaces, requiring implementation.
+
+    -If both superclass and interface have abstract methods, child must implement it (unless it’s abstract itself).
+
+    -Default methods from interfaces are only used if no superclass provides an implementation.
 
 
 
