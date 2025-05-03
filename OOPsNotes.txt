@@ -70,6 +70,17 @@ class-3:
 ->anonumous class 
 -> if two operators has same priority then the caluclation done from left to right.
 ->parathesis are mandatory while writing condition for while,for and if.
+->upcasting and downcasting:
+    Animal animal = new Dog(); // Upcasting
+    // Downcasting - only safe because 'animal' actually refers to a Dog object
+    Dog dog = (Dog) animal;
+    dog.fetch(); // Now you can call Dog-specific methods
+
+    Animal anotherAnimal = new Animal();
+
+    // This will throw a ClassCastException at runtime because 'anotherAnimal'
+    // is not a Dog object
+    // Dog anotherDog = (Dog) anotherAnimal;
 _______________________________________________________________________________________________________________________________________________
 class-4:
 ->in order to make any class immutable just make it final.
