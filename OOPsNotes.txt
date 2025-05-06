@@ -225,6 +225,16 @@ ex:
 ->no need of explicit tyes in parameters it will decide by interface signature(u can if u want)
 ->()->{return b<c} or a->b<c:
 ->Lambda expressions provide a concise syntax for implementing functional interfaces.(like comparator etc);
+    ex:
+    interface pp {
+        void print();
+    }
+    public class Main {
+        public static void main(String[] args) {
+            pp c = () -> System.out.println("hello");
+            c.print();
+        }
+    }
 ->BiFunction, predicate is predifined functional interface.
     ex:BiFunction<Integer, Integer, String> check = (a, b) -> (a > b) ? "Match" : "Not Match";
 ____________________________________________________________________________________________________________________________________________________
@@ -290,6 +300,26 @@ class 6(inheritance):
     -If both superclass and interface have abstract methods, child must implement it (unless it’s abstract itself).
 
     -Default methods from interfaces are only used if no superclass provides an implementation.
+class 7 (Exceptions):
+->Runtime exceptions that are not thrown by JVM :
+    NoSuchElementException, EmptyStackException, IllegalStateException (based on application state), UnsupportedOperationException,NumberFormatException.
+->if we even keep return statement the finally will work but we can't gurantee in system.exit() (practically will not finally block execute)
+        try {
+        c= a / b;
+        System.exit(0);
+        return;
+    } catch (RuntimeException e) {
+        c = -1;
+        System.exit(0);
+    } finally {
+    System.out.print("done");
+    }
+-> the exceptions in catch should be ascending hierarcy or downcast.
+ ex: not like:
+    try{}
+    catch (RuntimeException e) {}
+    catch (ArithmeticException e){} // not compile
+
 
 
 
