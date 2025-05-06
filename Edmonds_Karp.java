@@ -6,7 +6,7 @@ public class Edmonds_Karp{
         boolean[] vis = new boolean[v];
         
         q.offer(s);
-        vis[s] = true;
+        vis[s] = true;  
         parent[s] = -1;
     
         while (!q.isEmpty()) {

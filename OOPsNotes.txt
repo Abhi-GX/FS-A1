@@ -224,6 +224,7 @@ ex:
 =>(Lamda and functional interface)<=
 ->no need of explicit tyes in parameters it will decide by interface signature(u can if u want)
 ->()->{return b<c} or a->b<c:
+->Lambda expressions provide a concise syntax for implementing functional interfaces.(like comparator etc);
 ->BiFunction, predicate is predifined functional interface.
     ex:BiFunction<Integer, Integer, String> check = (a, b) -> (a > b) ? "Match" : "Not Match";
 ____________________________________________________________________________________________________________________________________________________
@@ -242,6 +243,8 @@ class 6(inheritance):
     5. If the parent doesn’t have a no-argument constructor, the compiler requires an explicit
     call to a parent constructor in each child constructor
 ->Field Hiding: subclass defines a field with the same name as a field in its superclass.
+->A hidden method occurs when a child class defi nes a static method with the same name
+  and signature as a static method defi ned in a parent class.
 ->Overriding:
     Summary
     Scenario	                                                     Allowed?	                                        Reason
