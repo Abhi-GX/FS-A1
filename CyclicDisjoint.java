@@ -6,7 +6,7 @@ public class CyclicDisjoint{
         if(i!=parent[i]){
             parent[i]=find(parent[i]);
         }
-        return i;
+        return i; 
     }
     public static boolean union(int i, int j){
         int pi=find(i);

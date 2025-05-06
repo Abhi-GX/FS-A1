@@ -7,7 +7,7 @@ class DistinctIslands {
     public static int[] parent;
     public static String[] pattern;
     public static int[] rank;
-    public static int find(int i){
+    public static int find(int i){ 
         while(parent[i]>=0){
             i=parent[i];
         }

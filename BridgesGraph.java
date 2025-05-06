@@ -5,7 +5,7 @@ public class BridgesGraph {
     public static int[] insert;
     public static int[] lsi;
     public static boolean[] vis;
-    static int row;
+    static int row; 
     public static void dfs(int[][] grid, int node,List<String> res,int inc,int parent){
         insert[node]=inc;
         lsi[node]=inc;
