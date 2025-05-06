@@ -303,6 +303,7 @@ class 6(inheritance):
 class 7 (Exceptions):
 ->Runtime exceptions that are not thrown by JVM :
     NoSuchElementException, EmptyStackException, IllegalStateException (based on application state), UnsupportedOperationException,NumberFormatException.
+->runtime exceptions does not require the throws statement.
 ->if we even keep return statement the finally will work but not when placed system.exit()
         try {
         c= a / b;
