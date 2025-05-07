@@ -266,6 +266,7 @@ class 6(inheritance):
     not declare any.
 
 ->final,static,private methods and (all)class members  cannot be overridden in Java.
+->A concrete subclass must implement all methods defined in an """""  inherited interface """""".
 ->Abstract class 
     -can't have final ,private 
     -abstract method does not have body
