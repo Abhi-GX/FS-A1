@@ -267,6 +267,7 @@ class 6(inheritance):
 
 ->final,static,private methods and (all)class members  cannot be overridden in Java.
 ->A concrete subclass must implement all methods defined in an """""  inherited interface """""".
+->The default keyword is not valid in abstract class or in regular classes either.
 ->Abstract class 
     -can't have final ,private 
     -abstract method does not have body
